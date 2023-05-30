@@ -1,4 +1,4 @@
-import Layout from "../components/layout";
+import Layout from "../pages/subida-informacion/layout";
 
 function MyApp({ Component, pageProps }) {
   return (
