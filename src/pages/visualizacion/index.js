@@ -1,6 +1,7 @@
 import "./globals.css";
 import LayoutPrincipal from "../../components/menu-principal/layout-principal";
 import usuarios from "./array-objetos";
+
 export default function UploadData() {
   return (
     <LayoutPrincipal>
@@ -49,7 +50,8 @@ function Card(props) {
           </dl>
 
           <div className="mt-6 flex items-center gap-8 text-xs justify-center">
-            <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
+            <button href="/Interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
+            
               Visualizar paciente
             </button>
           </div>

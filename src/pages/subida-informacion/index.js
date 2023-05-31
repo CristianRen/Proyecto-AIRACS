@@ -3,8 +3,8 @@ import Layout from "./layout";
 export default function UploadData() {
     return (
         <Layout>
-            <div className="bg-[#F4FFFE] border-2 border-indigo-100 ">
-                <form action="/action.php">
+            <div className="bg-[#F4FFFE]  ">
+                <form action="/visualizacion">
                     <div>
                         <strong className="flex justify-center uppercase underline my-2">
                             Registro pacientes
