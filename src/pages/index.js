@@ -30,16 +30,16 @@ export default function PaginaPrincipal() {
                     <div className="bg-transparent h-64" id="img-div"></div>
                     <div className="h-auto p-5 flex flex-col items-center justify-between border border-gray-100 shadow-xl  bg-white" id="quienes">
                         <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-4xl text-center" id="titulo-quienes-nuestros"><h1>QUIÉNES SOMOS?</h1></div>
-                        <div className="flex flex-row justify-center justify-around grid gap-4 grid-cols-3 grid " id="bloques-quienes-nuestros">
+                        <div className="flex flex-row justify-center items-center grid gap-4 lg:grid-cols-3  lg:grid-rows-1 sm:grid-rows-3 sm:grid-cols-1" id="bloques-quienes-nuestros">
                             {quienesSomos.map(elemento => {
                                 return <QuienesSomos titulo={elemento.Titulo} descripcion={elemento.DESCRIPCION}></QuienesSomos>
                             })}
                         </div>
                     </div>
                     <div className="bg-transparent h-64" id="img-div" ></div>
-                    <div className="p-5 flex flex-col items-center justify-between border border-gray-100 shadow-xl  bg-white" id="nuestros">
+                    <div className="h-auto p-5 flex flex-col items-center justify-center border border-gray-100 shadow-xl  bg-white" id="nuestros">
                         <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-4xl text-center" id="titulo-quienes-nuestros"><h1>NUESTROS SERVICIOS</h1></div>
-                        <div className="flex flex-row justify-center justify-around grid gap-4 grid-cols-3 grid " id="bloques-quienes-nuestros">
+                        <div className="pr-8 flex flex-row justify-start grid gap-4 lg:grid-cols-3  lg:grid-rows-1 sm:grid-rows-3 sm:grid-cols-1 " id="bloques-quienes-nuestros">
                             {nuestrosServicios.map(elemento => {
                                 return <NuestrosServicios imagen1={elemento.imagen1} titulo1={elemento.Titulo1} descripcion1={elemento.descripcion1}></NuestrosServicios>
                             })}
@@ -47,51 +47,51 @@ export default function PaginaPrincipal() {
                     </div>
                     <div className="bg-transparent h-64" id="img1-div" ></div>
                     <div className="bg-transparent flex items-baseline justify-center" id="img1-div">
-                        <div className=" bg-[#ACBCFF] w-2/5 py-10 px-10 shadow-xl">
-                            <div className="-mt-20 bg-white shadow-xl" id="contactanos">
+                        <div className=" bg-violet-400 w-2/5 py-10 px-10 shadow-xl">
+                            <div className="-mt-20 bg-white shadow-xl " id="contactanos">
                                 <form>
-                                    <h3 className=" p-5 w-full text-center text-3xl font-bold text-gray-900">CONTACTANOS</h3>
+                                    <h3 className=" p-5 w-full text-center xl:text-3xl font-bold text-gray-900 lg:text-l">CONTACTANOS</h3>
 
                                     <label for="nit">
-                                        <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900" >NIT:</h3>
+                                        <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l" >NIT:</h3>
                                     </label>
-                                    <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 "
+                                    <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1"
                                         placeholder="Escribe tu NIT" value={botonactivo.NIT}type="number" id="nit" name="NIT" onChange={handleChange} required /><br /><br />
                                 </form>
 
                                 <label for="razon-social">
-                                    <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">RAZON SOCIAL:</h3>
+                                    <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">RAZON SOCIAL:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe el nombre de la empresa" type="text" value={botonactivo.razonSocial} id="razon-social" name="razonSocial" onChange={handleChange} required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe el nombre de la empresa" type="text" value={botonactivo.razonSocial} id="razon-social" name="razonSocial" onChange={handleChange} required /><br /><br />
 
                                 <label for="ciudad">
-                                    <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">CIUDAD:</h3>
+                                    <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">CIUDAD:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe ciudad de residencia" type="text" value={botonactivo.CIUDAD} id="ciudad" name="CIUDAD" onChange={handleChange} required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe ciudad de residencia" type="text" value={botonactivo.CIUDAD} id="ciudad" name="CIUDAD" onChange={handleChange} required /><br /><br />
 
                                 <label for="direccion">
-                                    <h3 className=" mx-10 my-1 text-lefth text-xl font-bold text-gray-900">DIRECCIÓN:</h3>
+                                    <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">DIRECCIÓN:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu dirección" type="text" value={botonactivo.DIRECCION} id="direccion" name="DIRECCION" onChange={handleChange} required /><br /><br />
+                                <input className="mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe tu dirección" type="text" value={botonactivo.DIRECCION} id="direccion" name="DIRECCION" onChange={handleChange} required /><br /><br />
 
                                 <label for="telefono">
-                                    <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">TELÉFONO:</h3>
+                                    <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">TELÉFONO:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu número de contacto" type="text" value={botonactivo.TELEFONO} id="telefono" name="TELEFONO" onChange={handleChange} required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe tu número de contacto" type="text" value={botonactivo.TELEFONO} id="telefono" name="TELEFONO" onChange={handleChange} required /><br /><br />
 
                                 <label for="correo">
-                                    <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">CORREO ELECTRÓNICO:</h3>
+                                    <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">CORREO ELECTRÓNICO:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu correo corporativo" value={botonactivo.EMAIL} type="text" id="correo" name="EMAIL" onChange={handleChange} required /><br /><br />
+                                <input className=" mx-10 w-5/6 to-black rounded-md bg-violet-100 flex items-stretch p-1" placeholder="Escribe tu correo corporativo" value={botonactivo.EMAIL} type="text" id="correo" name="EMAIL" onChange={handleChange} required /><br /><br />
 
                                 <div className="flex flex-row">
-                                    <input className={ `${botonactivo.button}  mx-10 w-5 border to-black rounded-md bg-slate-200 p-1`} type="radio" id="agree" name="agree" onClick={()=>onSubmit()} required /><br /><br />
+                                    <input className={ `${botonactivo.button}  mx-10 w-5 border to-black rounded-md bg-indigo-200 p-1`} type="radio" id="agree" name="agree" onClick={()=>onSubmit()} required /><br /><br />
 
-                                    <label className="mr-10 my-1 mt-2 text-justify text-l text-gray-500" for="agree" required>Aceptar políticas de tratamiento de datos</label>
+                                    <label className="mr-10 my-1 mt-2  text-justify text-gray-500 xl:text-l lg:text-l md:text-sm sm:text-xs" for="agree" required>Aceptar políticas de tratamiento de datos</label>
 
                                 </div>
                                 <div className="flex justify-center">
-                                    <input className=" w-1/3 rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2" type="submit" value="Enviar" onClick={()=>datosEnviados()}></input>
+                                    <input className=" w-1/3 rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2 md:text-sm sm:text-xs" type="submit" value="Enviar" onClick={()=>datosEnviados()}></input>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +126,7 @@ function QuienesSomos(props) {
 function NuestrosServicios(props) {
     return (
 
-        <div className=" w-5/6 border-[#B799FF] border-x-[#B799FF] bg-white-800 border-4 border-[#B799FF] border-y-[#B799FF] p-4 flex items-center flex-col">
+        <div className="ml-auto w-5/6 border-[#B799FF] border-x-[#B799FF] bg-white-800 border-4 border-[#B799FF] border-y-[#B799FF] p-4 flex items-center flex-col sm:mr-7">
             <div className="flex items-center gap-4">
                 <img
                     alt="rayosX"
@@ -139,7 +139,7 @@ function NuestrosServicios(props) {
                 <li>
                     <a
                         href="#"
-                        className="block w-full h-full rounded-lg border border-gray-700 p-4 hover:border-pink-600"
+                        className="block w-full h-full rounded-lg border border-gray-700 p-4 hover:border-[#B799FF]"
                     >
                         <p className="w-full text-center text-xl font-bold text-gray-900">{props.titulo1}</p>
 

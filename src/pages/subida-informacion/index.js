@@ -1,17 +1,18 @@
+import LayoutPrincipal from "@/components/menu-principal/layout-principal";
 import "./globals.css"
 import Layout from "./layout";
 export default function UploadData() {
     return (
-        <Layout>
-            <div className="bg-[#F4FFFE]  ">
+        <LayoutPrincipal>
+            <div className="bg-white  ">
                 <form action="/visualizacion">
                     <div>
-                        <strong className="flex justify-center uppercase underline my-2">
+                        <strong className="flex justify-center uppercase underline my-2 text-2xl">
                             Registro pacientes
                         </strong>
                     </div>
                     <section>
-                        <div className="border-2 border-indigo-200 my-2 mx-20 p-2 ">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
                             <p className="mx-20 font-bold text-xl">Información del paciente:</p>
                             <div className="flex justify-start space-x-6 mx-20 py-2">
                                 <div>
@@ -21,7 +22,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tus nombres"
                                     />
                                     <br />
@@ -32,7 +33,7 @@ export default function UploadData() {
                                     </label>
                                     <br />
                                     <input
-                                        className="border to-black bg-slate-200 p-1"
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         type="text"
                                         placeholder="Escribe tus apellidos"
                                     />
@@ -40,11 +41,11 @@ export default function UploadData() {
                                 </div>
                                 <div>
                                     <label className="uppercase font-bold" for="id">
-                                        Tipo de identidad:
+                                        Tipo de documento:
                                     </label>
                                     <br />
 
-                                    <select className="border to-black bg-slate-200 p-1.5" id="id">
+                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id">
                                         <option value="tj-id">Tarjeta de identidad</option>
                                         <option value="cc">Cedula</option>
                                         <option value="Pasaporte">Pasaporte</option>
@@ -53,11 +54,11 @@ export default function UploadData() {
                                 </div>
                                 <div>
                                     <label className="uppercase font-bold" for="#id">
-                                        Documento de identidad:
+                                        Numero de documento:
                                     </label>
                                     <br />
                                     <input
-                                        className="border to-black bg-slate-200 p-1"
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         type="number"
                                         placeholder="Escribe tu documento"
                                     />
@@ -68,7 +69,7 @@ export default function UploadData() {
                                         Sexo:
                                     </label>
                                     <br />
-                                    <select className="border to-black bg-slate-200 p-1.5 " id="id">
+                                    <select className="border to-black rounded-md bg-violet-100 p-1.5 " id="id">
                                         <option value="F">Femenino</option>
                                         <option value="M">Másculino</option>
                                     </select>
@@ -86,7 +87,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black  bg-slate-200 p-1  "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tu edad"
                                     />
                                     <br />
@@ -99,7 +100,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black  bg-slate-200 p-1  "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tu altura"
                                     />
                                     <br />
@@ -112,7 +113,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black  bg-slate-200 p-1  "
+                                        className=" border to-black rounded-md bg-violet-100 p-1 p-1  "
                                         placeholder="Escribe tu peso"
                                     />
                                     <br />
@@ -122,7 +123,7 @@ export default function UploadData() {
                     </section>
 
                     <section>
-                        <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del servicio:</p>
                             <div className="flex justify-start space-x-6 mx-20">
                                 <div>
@@ -132,7 +133,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe el servicio"
                                     />
                                     <br />
@@ -144,7 +145,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe el procedimiento"
                                     />
                                     <br />
@@ -156,19 +157,19 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe el tipo de estudio"
                                     />
                                     <br />
                                 </div>
                                 <div>
                                     <label className="uppercase font-bold" for="servicio">
-                                        Servicio:
+                                        zona bucal:
                                     </label>
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tus nombres"
                                     />
                                     <br />
@@ -178,7 +179,7 @@ export default function UploadData() {
                     </section>
 
                     <section>
-                        <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del equipo:</p>
                             <div className="flex justify-start space-x-6 mx-20">
                                 <div>
@@ -188,7 +189,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Nombre del equipo"
                                     />
                                     <br />
@@ -201,7 +202,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Nombre de la marca"
                                     />
                                     <br />
@@ -214,7 +215,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="text"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Nombre del modelo"
                                     />
                                     <br />
@@ -227,7 +228,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Número serial"
                                     />
                                     <br />
@@ -240,7 +241,7 @@ export default function UploadData() {
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black  bg-slate-200 p-1 "
+                                        className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Número del consultorio"
                                     />
                                     <br />
@@ -250,7 +251,7 @@ export default function UploadData() {
                     </section>
 
                     <section>
-                        <div className="border-2 border-indigo-200 my-2 mx-20 p-2 ">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
                             <p className="mx-20 font-bold text-xl">Información del estudio:</p>
                             <div className="grid grid-cols-4 gap-4 mx-20 ">
                                 <div>
@@ -261,7 +262,7 @@ export default function UploadData() {
                                         <br />
                                         <input
                                             type="date"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                         />
                                         <br />
                                     </div>
@@ -272,7 +273,7 @@ export default function UploadData() {
                                         <br />
                                         <input
                                             type="number"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad dosis"
                                         />
                                         <br />
@@ -284,7 +285,7 @@ export default function UploadData() {
                                         <br />
                                         <input
                                             type="number"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de dosis total"
                                         />
                                         <br />
@@ -299,7 +300,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de dosis total"
                                         />
                                         <br />
@@ -312,7 +313,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de dosis total"
                                         />
                                         <br />
@@ -325,7 +326,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de dosis total"
                                         />
                                         <br />
@@ -340,7 +341,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de tomas buenas"
                                         />
                                         <br />
@@ -353,7 +354,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de tomas malas"
                                         />
                                         <br />
@@ -366,7 +367,7 @@ export default function UploadData() {
 
                                         <input
                                             type="text"
-                                            className=" border to-black  bg-slate-200 p-1 "
+                                            className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad de tomas total"
                                         />
                                         <br />
@@ -375,7 +376,7 @@ export default function UploadData() {
                                 <div>
                                     <p className="font-bold text-lg">Causa repetición:</p>
                                     <div>
-                                        <textarea className=" bg-slate-200" rows="6"></textarea>
+                                        <textarea className=" bg-violet-100" rows="6"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -383,13 +384,13 @@ export default function UploadData() {
                     </section>
 
                     <section>
-                        <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <div className="flex justify-around">
                                 <div>
                                     <p className="font-bold text-lg">
-                                        Información quien realizo la muestra
+                                        Datos profesional que realiza estudio
                                     </p>
-                                    <div className="border-2 border-black p-4">
+                                    <div className="border-2 border-violet-500 p-4">
                                         <div>
                                             <label className="uppercase font-bold" for="nombre">
                                                 Nombre Completo:
@@ -397,7 +398,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className=" border to-black  bg-slate-200 p-1 "
+                                                className="border to-black rounded-md bg-violet-100 p-1"
                                                 placeholder="Ingrese nombre completo"
                                             />
                                             <br />
@@ -409,7 +410,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className=" border to-black  bg-slate-200 p-1 "
+                                                className="border to-black rounded-md bg-violet-100 p-1"
                                                 placeholder="Ingrese Cedula"
                                             />
                                             <br />
@@ -421,7 +422,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className=" border to-black  bg-slate-200 p-1 "
+                                                className="border to-black rounded-md bg-violet-100 p-1"
                                                 placeholder="Ingrese su cargo"
                                             />
                                             <br />
@@ -430,7 +431,7 @@ export default function UploadData() {
                                 </div>
                                 <div>
                                     <p className="font-bold text-lg">Subir imagen</p>
-                                    <div className="border-2 border-black p-20">
+                                    <div className="border-2 border-violet-500 p-20">
                                         <input
                                             type="file"
                                             class="block w-full text-sm text-slate-500
@@ -454,6 +455,6 @@ export default function UploadData() {
                     </div>
                 </form>
             </div>
-        </Layout>
+        </LayoutPrincipal>
     );
 }
