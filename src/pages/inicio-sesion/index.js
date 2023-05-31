@@ -7,8 +7,6 @@ import { useState } from "react";
 export default function InicioSesion() {
     const [botonactivo, setbotonactivo] = useState({ usuario: "", contrasena: "" });
 
-    const usuarios = [{ nombre: "camila", clave: "1234" }]
-
     const handleChange = (evento) => {
         console.log(evento.target.value);
         setbotonactivo({
@@ -16,24 +14,6 @@ export default function InicioSesion() {
             [evento.target.name]: evento.target.value
         })
     }
-
-    const onSubmit = () => {
-        console.log(botonactivo);
-        //     return (
-        //      ? <Link href="/subida-informacion/subida-informacion"></Link> : <h3>"CONTRASEÑA INVALIDA"</h3>
-        //     )
-    }
-
-    const comparacion = () => {
-        console.log(botonactivo);
-        if (botonactivo.usuario == usuarios.nombre) {
-            console.log(true)
-        }
-        //     return (
-        //      ? <Link href="/subida-informacion/subida-informacion"></Link> : <h3>"CONTRASEÑA INVALIDA"</h3>
-        //     )
-    }
-
 
     return (
         <LayoutPrincipal>
@@ -56,7 +36,7 @@ export default function InicioSesion() {
                                 <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">CONTRASEÑA:</h3>
                             </label>
                             <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 "
-                                    placeholder="Escriba su contraseña" type="password" id="contrasena" name="contrasena" value={botonactivo.contrasena} onChange={handleChange} required /><br /><br />
+                                placeholder="Escriba su contraseña" type="password" id="contrasena" name="contrasena" value={botonactivo.contrasena} onChange={handleChange} required /><br /><br />
 
                             <div className="flex flex-row justify-center">
                                 <p className="olvido-registro"><Link style={{
@@ -71,7 +51,7 @@ export default function InicioSesion() {
                             <div className="flex justify-center ">
                                 {/* <input className={`${botonactivo.button}  w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2`} id="submit-botom" type="submit" value="Ingresar" on={onSubmit}
                                     onDoubleClick={comparacion}></input> */}
-                                    <a href="/subida-informacion" className= "w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2 text-center" id="submit-botom" type="submit" value="Ingresar" >Ingresar</a>
+                                <a href="/subida-informacion" className="w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2 text-center" id="submit-botom" type="submit" value="Ingresar" >Ingresar</a>
                             </div>
                         </div>
                     </div>

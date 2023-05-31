@@ -2,8 +2,27 @@ import LayoutPrincipal from "../components/menu-principal/layout-principal";
 import quienesSomos from "../components/menu-principal/array-quienes";
 import nuestrosServicios from "../components/menu-principal/array-servicios";
 import "./estilo-principal.css"
+import { useState } from "react";
 
 export default function PaginaPrincipal() {
+    const [botonactivo, setbotonactivo] = useState({ NIT: "", razonSocial: "", CIUDAD:"", DIRECCION:"", TELEFONO:"", EMAIL:""});
+
+    const handleChange = (evento) => {
+        console.log(evento.target.value);
+        setbotonactivo({
+            ...botonactivo,
+            [evento.target.name]: evento.target.value
+        })
+    }
+
+    const onSubmit = () => {
+        console.log(botonactivo)
+    }
+
+    const datosEnviados = () => {
+        alert("Hemos recibido tus datos, nos contactaremos contigo lo más pronto posible")
+    }
+
     return (
         <div className="">
             <LayoutPrincipal>
@@ -37,41 +56,42 @@ export default function PaginaPrincipal() {
                                         <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900" >NIT:</h3>
                                     </label>
                                     <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 "
-                                        placeholder="Escribe tu NIT" type="number" id="nit" name="nit" required /><br /><br />
+                                        placeholder="Escribe tu NIT" value={botonactivo.NIT}type="number" id="nit" name="NIT" onChange={handleChange} required /><br /><br />
                                 </form>
 
                                 <label for="razon-social">
                                     <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">RAZON SOCIAL:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe el nombre de la empresa" type="text" id="razon-social" name="razon-social" required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe el nombre de la empresa" type="text" value={botonactivo.razonSocial} id="razon-social" name="razonSocial" onChange={handleChange} required /><br /><br />
 
                                 <label for="ciudad">
                                     <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">CIUDAD:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe ciudad de residencia" type="text" id="ciudad" name="ciudad" required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe ciudad de residencia" type="text" value={botonactivo.CIUDAD} id="ciudad" name="CIUDAD" onChange={handleChange} required /><br /><br />
 
                                 <label for="direccion">
                                     <h3 className=" mx-10 my-1 text-lefth text-xl font-bold text-gray-900">DIRECCIÓN:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu dirección" type="text" id="direccion" name="direccion" required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu dirección" type="text" value={botonactivo.DIRECCION} id="direccion" name="DIRECCION" onChange={handleChange} required /><br /><br />
 
                                 <label for="telefono">
                                     <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">TELÉFONO:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu número de contacto" type="text" id="telefono" name="telefono" required /><br /><br />
+                                <input className=" mx-10 w-5/6 border to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu número de contacto" type="text" value={botonactivo.TELEFONO} id="telefono" name="TELEFONO" onChange={handleChange} required /><br /><br />
 
                                 <label for="correo">
                                     <h3 className="mx-10 my-1 text-lefth text-xl font-bold text-gray-900">CORREO ELECTRÓNICO:</h3>
                                 </label>
-                                <input className=" mx-10 w-5/6 to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu correo corporativo" type="text" id="correo" name="correo" required /><br /><br />
+                                <input className=" mx-10 w-5/6 to-black rounded-md bg-slate-200 p-1 " placeholder="Escribe tu correo corporativo" value={botonactivo.EMAIL} type="text" id="correo" name="EMAIL" onChange={handleChange} required /><br /><br />
 
                                 <div className="flex flex-row">
-                                    <input className=" mx-10 w-5 border to-black rounded-md bg-slate-200 p-1 " type="radio" id="agree" name="agree" required /><br /><br />
+                                    <input className={ `${botonactivo.button}  mx-10 w-5 border to-black rounded-md bg-slate-200 p-1`} type="radio" id="agree" name="agree" onClick={()=>onSubmit()} required /><br /><br />
+
                                     <label className="mr-10 my-1 mt-2 text-justify text-l text-gray-500" for="agree" required>Aceptar políticas de tratamiento de datos</label>
 
                                 </div>
                                 <div className="flex justify-center">
-                                    <input className=" w-1/3 rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2" type="submit" value="Enviar"></input>
+                                    <input className=" w-1/3 rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2" type="submit" value="Enviar" onClick={()=>datosEnviados()}></input>
                                 </div>
                             </div>
                         </div>
