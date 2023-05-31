@@ -3,6 +3,7 @@ const radiografiasPacientes =
     // PRIMER OBJETO
     NOMBRES: "GISELLE CAMILA",
     APELLIDOS: "GONZALEZ CIFUENTES",
+    IMAGENES: "https://radiologiadentallaspalmas.com/wp-content/uploads/2019/07/post.-pan.jpeg",
     TipoDocumento: "CEDULA",
     ID: "1018478587",
     SEXO: "FEMENINO",
@@ -36,6 +37,7 @@ const radiografiasPacientes =
     // SEGUNDO OBJETO
     NOMBRES: "YESICA ANDREA",
     APELLIDOS: "SOLER LOPEZ",
+    IMAGENES:"https://globalimagen.com.ec/wp-content/uploads/2023/02/45-Radiografia-dental-periapical.webp",
     TipoDocumento: "CEDULA",
     ID: "1012345678",
     SEXO: "FEMENINO",
@@ -69,6 +71,7 @@ const radiografiasPacientes =
     // TERCER OBJETO 
     NOMBRES: "WILSON ALBERTO",
     APELLIDOS: "ESCOBAR ESCOBAR",
+    IMAGENES: "https://imagenrx.net/wp-content/uploads/2019/06/serv_tunm.jpg", 
     TipoDocumento: "CEDULA EXTRANJERA",
     ID: "5432357",
     SEXO: "MASCULINO",
@@ -102,6 +105,7 @@ const radiografiasPacientes =
     // CUARTO OBJETO
     NOMBRES: "JUAN CAMILO",
     APELLIDOS: "GUILLEN BARBOSA",
+    IMAGENES:"https://www.actaodontologica.com/ediciones/2012/4/art-22/3.jpg",
     TipoDocumento: "CEDULA",
     ID: "123056498",
     SEXO: "MASCULINO",
@@ -135,6 +139,7 @@ const radiografiasPacientes =
     // QUINTO OBJETO
     NOMBRES: "YESICA PAOLA",
     APELLIDOS: "JARAMILLO GUTIERREZ",
+    IMAGENES: "https://cdn-gojmf.nitrocdn.com/vhbBjgPyRXHyXBjwsZshxMMktRpfLbXF/assets/images/optimized/rev-e635d4c/wp-content/uploads/inline-images/tac_zona_incisivos_0.png",
     TipoDocumento: "CEDULA",
     ID: "1111145532",
     SEXO: "FEMENINO",
@@ -144,7 +149,7 @@ const radiografiasPacientes =
     SERVICIO: "REHABILITACIÓN",
     PROCEDIMIENTO: "REHABILITACIÓN IMPLANTE",
     ESTUDIO: "TOMOGRAFÍA",
-    ZONA: "INFERIOS",
+    ZONA: "INFERIOR",
     EQUIPO: "TOMOGRAFO ODONTOLÓGICO",
     MARCA: "MYRAY",
     MODELO: "HYPERION X9",
@@ -167,8 +172,9 @@ const radiografiasPacientes =
 {
 // SEXTO OBJETO
     // QUINTO OBJETO
-    NOMBRES: "ESTBAN",
+    NOMBRES: "ESTEBAN",
     APELLIDOS: "SALAMANCA PULIDO",
+    IMAGENES: "https://dentometric.com/wp-content/uploads/2019/12/1.png",
     TipoDocumento: "CEDULA",
     ID: "1018345654",
     SEXO: "MASCULINO",
