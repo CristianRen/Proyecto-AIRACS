@@ -4,13 +4,12 @@ import FooterPrincipal from "./footer-principal"
 // import "../estilos/estilo-footer.css"
 // import "../estilos/estilo-principal.css"
 
-export default function LayoutPrincipal({children}) {
+export default function LayoutPrincipal({children, login}) {
     return (
         <>
-        <NavbarPrincipal></NavbarPrincipal>
+        <NavbarPrincipal login={login}></NavbarPrincipal>
         <main>{children}</main>
         <FooterPrincipal></FooterPrincipal>
     </>
     );
-
 } 

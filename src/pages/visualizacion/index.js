@@ -1,9 +1,10 @@
 import "./globals.css";
 import LayoutPrincipal from "../../components/menu-principal/layout-principal";
 import usuarios from "./array-objetos";
-export default function UploadData() {
+
+export default function Vizualizacion() {
   return (
-    <LayoutPrincipal>
+    <LayoutPrincipal login={true}>
       <section className="bg-[#F4FFFE]">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <ul className="grid gap-4 mt-16 sm:grid-cols-2 lg:grid-cols-3">
