@@ -12,9 +12,9 @@ export default function UploadData() {
                         </strong>
                     </div>
                     <section>
-                        <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
+                        <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del paciente:</p>
-                            <div className="flex justify-start space-x-6 mx-20 py-2">
+                            <div className="flex justify-start space-x-6 mx-20 py-2 flex  md:flex-wrap sm:flex-wrap">
                                 <div>
                                     <label className="uppercase font-bold" for="nombre">
                                         Nombres:
@@ -78,7 +78,7 @@ export default function UploadData() {
 
                             <div
                                 name="Linea # 2"
-                                className="flex justify-start space-x-6  mx-20  "
+                                className="flex justify-start space-x-6  mx-20  flex  md:flex-wrap sm:flex-wrap"
                             >
                                 <div>
                                     <label className="uppercase font-bold" for="edad">
@@ -125,7 +125,7 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del servicio:</p>
-                            <div className="flex justify-start space-x-6 mx-20">
+                            <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap">
                                 <div>
                                     <label className="uppercase font-bold" for="servicio">
                                         Servicio:
@@ -181,7 +181,7 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del equipo:</p>
-                            <div className="flex justify-start space-x-6 mx-20">
+                            <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap">
                                 <div>
                                     <label className="uppercase font-bold" for="equipo">
                                         Equipo:
@@ -253,7 +253,7 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
                             <p className="mx-20 font-bold text-xl">Información del estudio:</p>
-                            <div className="grid grid-cols-4 gap-4 mx-20 ">
+                            <div className="grid lg:grid-cols-4 gap-4 mx-20 grid md:grid-cols-1">
                                 <div>
                                     <div>
                                         <label className="uppercase font-bold" for="fecha">
@@ -385,7 +385,7 @@ export default function UploadData() {
 
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
-                            <div className="flex justify-around">
+                            <div className="grid lg:grid-cols-2 gap-4 grid md:rows-2 gap-4 ">
                                 <div>
                                     <p className="font-bold text-lg">
                                         Datos profesional que realiza estudio

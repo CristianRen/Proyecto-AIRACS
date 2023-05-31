@@ -5,7 +5,7 @@ import usuarios from "./array-objetos";
 export default function UploadData() {
   return (
     <LayoutPrincipal>
-      <section className="bg-[#F4FFFE]">
+      <section className="bg-white">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <ul className="grid gap-4 mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {usuarios.map((user) => {
@@ -23,7 +23,7 @@ function Card(props) {
     <li key={props.user.ID}>
       <a
         href="#"
-        className="bg-white block rounded-lg p-4 shadow-lg shadow-indigo-100"
+        className="bg-white border-2 border-violet-300 block rounded-lg p-4 shadow-lg shadow-indigo-100"
       >
         <img
           alt="Home"

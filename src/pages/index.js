@@ -29,7 +29,7 @@ export default function PaginaPrincipal() {
                 <div>
                     <div className="bg-transparent h-64" id="img-div"></div>
                     <div className="h-auto p-5 flex flex-col items-center justify-between border border-gray-100 shadow-xl  bg-white" id="quienes">
-                        <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-4xl text-center" id="titulo-quienes-nuestros"><h1>QUIÉNES SOMOS?</h1></div>
+                        <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-center" id="titulo-quienes-nuestros"><h1 className="text-3xl">QUIÉNES SOMOS?</h1></div>
                         <div className="flex flex-row justify-center items-center grid gap-4 lg:grid-cols-3  lg:grid-rows-1 sm:grid-rows-3 sm:grid-cols-1" id="bloques-quienes-nuestros">
                             {quienesSomos.map(elemento => {
                                 return <QuienesSomos titulo={elemento.Titulo} descripcion={elemento.DESCRIPCION}></QuienesSomos>
@@ -38,7 +38,7 @@ export default function PaginaPrincipal() {
                     </div>
                     <div className="bg-transparent h-64" id="img-div" ></div>
                     <div className="h-auto p-5 flex flex-col items-center justify-center border border-gray-100 shadow-xl  bg-white" id="nuestros">
-                        <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-4xl text-center" id="titulo-quienes-nuestros"><h1>NUESTROS SERVICIOS</h1></div>
+                        <div className="mb-10 flex flex justify-center items-center mt-4 text-lg font-bold text-gray-900 text-center" id="titulo-quienes-nuestros"><h1 className="text-3xl">NUESTROS SERVICIOS</h1></div>
                         <div className="pr-8 flex flex-row justify-start grid gap-4 lg:grid-cols-3  lg:grid-rows-1 sm:grid-rows-3 sm:grid-cols-1 " id="bloques-quienes-nuestros">
                             {nuestrosServicios.map(elemento => {
                                 return <NuestrosServicios imagen1={elemento.imagen1} titulo1={elemento.Titulo1} descripcion1={elemento.descripcion1}></NuestrosServicios>
@@ -50,7 +50,7 @@ export default function PaginaPrincipal() {
                         <div className=" bg-violet-400 w-2/5 py-10 px-10 shadow-xl">
                             <div className="-mt-20 bg-white shadow-xl " id="contactanos">
                                 <form>
-                                    <h3 className=" p-5 w-full text-center xl:text-3xl font-bold text-gray-900 lg:text-l">CONTACTANOS</h3>
+                                    <h3 className=" p-5 w-full text-center xl:text-3xl font-bold text-gray-900 lg:text-2xl">CONTACTANOS</h3>
 
                                     <label for="nit">
                                         <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l" >NIT:</h3>
@@ -106,7 +106,7 @@ export default function PaginaPrincipal() {
 function QuienesSomos(props) {
     return (
         <div
-            className="bg-gradient-to-r from-pink-500 via-[#B799FF] to-[#B799FF] p-1 shadow-xl flex justify-center" id="bordeado"
+            className="bg-gradient-to-r from-violet-200 via-violet-500 to-violet-800 p-1 shadow-xl flex justify-center" id="bordeado"
         >
             <a className="block bg-white lg:p-8" href="">
                 <div className="my-5 mx-2">
@@ -126,7 +126,7 @@ function QuienesSomos(props) {
 function NuestrosServicios(props) {
     return (
 
-        <div className="ml-auto w-5/6 border-[#B799FF] border-x-[#B799FF] bg-white-800 border-4 border-[#B799FF] border-y-[#B799FF] p-4 flex items-center flex-col sm:mr-7">
+        <div className="ml-auto w-5/6 border-violet-500 border-x-violet-500 bg-white-800 border-4 border-violet-500 border-y-violet-500 p-4 flex items-center flex-col sm:mr-7">
             <div className="flex items-center gap-4">
                 <img
                     alt="rayosX"
@@ -139,7 +139,7 @@ function NuestrosServicios(props) {
                 <li>
                     <a
                         href="#"
-                        className="block w-full h-full rounded-lg border border-gray-700 p-4 hover:border-[#B799FF]"
+                        className="block w-full h-full rounded-lg border border-violet-500 p-4 hover:border-red-500"
                     >
                         <p className="w-full text-center text-xl font-bold text-gray-900">{props.titulo1}</p>
 
