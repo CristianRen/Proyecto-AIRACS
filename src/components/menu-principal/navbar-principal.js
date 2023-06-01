@@ -29,16 +29,16 @@ export default function NavbarPrincipal(props) {
                 <>
                   <li>
                     <Link
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
-                      href="/"
+                      className="text-gray-500 transition hover:text-violet-600"
+                      href="/subida-informacion"
                     >
                       Subida de información
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
-                      href="/#quienes"
+                      className="text-gray-500 transition hover:text-violet-600"
+                      href="/visualizacion"
                     >
                       Visualización información paciente
                     </Link>
@@ -46,8 +46,8 @@ export default function NavbarPrincipal(props) {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
-                      href="/#nuestros"
+                      className="text-gray-500 transition hover:text-violet-600"
+                      href="/interpretacion"
                     >
                       Interpretacion
                     </a>
@@ -57,7 +57,7 @@ export default function NavbarPrincipal(props) {
                 <>
                   <li>
                     <Link
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
+                      className="text-gray-500 transition hover:text-violet-600"
                       href="/"
                     >
                       Inicio
@@ -65,7 +65,7 @@ export default function NavbarPrincipal(props) {
                   </li>
                   <li>
                     <Link
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
+                      className="text-gray-500 transition hover:text-violet-600"
                       href="/#quienes"
                     >
                       ¿Quiénes Somos?
@@ -74,7 +74,7 @@ export default function NavbarPrincipal(props) {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
+                      className="text-gray-500 transition hover:text-violet-600"
                       href="/#nuestros"
                     >
                       Nuestros servicios
@@ -83,7 +83,7 @@ export default function NavbarPrincipal(props) {
 
                   <li>
                     <a
-                      className="text-gray-500 transition hover:text-[#ACBCFF]"
+                      className="text-gray-500 transition hover:text-violet-600"
                       href="/#img1-div"
                     >
                       Contáctanos
@@ -98,7 +98,7 @@ export default function NavbarPrincipal(props) {
             {props.login ? (
               <div className="sm:flex sm:gap-4">
                 <a
-                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#B799FF] transition hover:text-[#ACBCFF] sm:block"
+                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#B799FF] transition hover:text-black hover:text-violet-600 sm:block"
                   href="/"
                 >
                   Cerrar sesión
@@ -107,14 +107,14 @@ export default function NavbarPrincipal(props) {
             ) : (
               <div className="sm:flex sm:gap-4">
                 <a
-                  className="block rounded-md bg-[#B799FF] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-[#ACBCFF]"
+                  className="block rounded-md bg-[#B799FF] px-5 py-2.5 text-sm font-medium text-white transition hover:bg-violet-100 hover:text-violet-600"
                   href="/inicio-sesion"
                 >
                   Iniciar sesión
                 </a>
 
                 <a
-                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#B799FF] transition hover:text-[#ACBCFF] sm:block"
+                  className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-[#B799FF] transition hover:text-violet-600 sm:block"
                   href="/"
                 >
                   Registrarse

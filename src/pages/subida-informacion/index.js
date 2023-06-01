@@ -1,9 +1,8 @@
 import LayoutPrincipal from "@/components/menu-principal/layout-principal";
 import "./globals.css"
-import Layout from "./layout";
 export default function UploadData() {
     return (
-        <LayoutPrincipal>
+        <LayoutPrincipal login={true}>
             <div className="bg-white  ">
                 <form action="/visualizacion">
                     <div>

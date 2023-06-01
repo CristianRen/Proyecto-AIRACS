@@ -1,31 +1,30 @@
 import "./globals.css";
-import Layout from "./layout";
-import usuarios from "./array-objetos";
+import LayoutPrincipal from "@/components/menu-principal/layout-principal";
 import radiografiasPacientes from "./array-objetos";
 
 export default function Interpretacion() {
   return (
-    <Layout>
-      <div className="bg-[#F4FFFE]  ">
+    <LayoutPrincipal login={true}>
+      <div className="bg-white">
         <form action="/subida-informacion">
           <div>
-            <strong className="flex justify-center uppercase underline py-4">
+            <strong className="flex justify-center uppercase underline py-4 text-2xl">
               Información del paciente
             </strong>
           </div>
           <section>
-            <div className="border-2 border-indigo-200 my-2 mx-20 p-2 ">
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
               <p className="mx-20 font-bold text-xl">
                 Información del paciente:
               </p>
-              <div className="flex justify-start space-x-6 mx-20 py-2">
+              <div className="flex justify-start space-x-6 mx-20 py-2 flex  md:flex-wrap sm:flex-wrap">
                 <div>
                   <label className="uppercase font-bold" for="nombre">
                     Nombres:
                   </label>
                   <br />
                   <input
-                    className="border to-black bg-slate-200 p-1"
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].NOMBRES}
                   />
                   <br />
@@ -36,7 +35,7 @@ export default function Interpretacion() {
                   </label>
                   <br />
                   <input
-                    className="border to-black bg-slate-200 p-1"
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     type="text"
                     value={radiografiasPacientes[0].APELLIDOS}
                   />
@@ -49,7 +48,7 @@ export default function Interpretacion() {
                   <br />
 
                   <select
-                    className="border to-black bg-slate-200 p-1.5"
+                    className="border to-black bg-violet-100 p-1.5"
                     id="id"
                   >
                     <option value={radiografiasPacientes[0].TipoDocumento}>
@@ -66,7 +65,7 @@ export default function Interpretacion() {
                   </label>
                   <br />
                   <input
-                    className="border to-black bg-slate-200 p-1"
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     type="number"
                     value={radiografiasPacientes[0].ID}
                   />
@@ -78,7 +77,7 @@ export default function Interpretacion() {
                   </label>
                   <br />
                   <select
-                    className="border to-black bg-slate-200 p-1.5 "
+                    className="border to-black bg-violet-100 p-1.5 "
                     id="id"
                   >
                     <option value="F">Femenino</option>
@@ -89,7 +88,7 @@ export default function Interpretacion() {
 
               <div
                 name="Linea # 2"
-                className="flex justify-start space-x-6  mx-20  "
+                className="flex justify-start space-x-6  mx-20  flex md:flex-wrap sm:flex-wrap"
               >
                 <div>
                   <label className="uppercase font-bold" for="edad">
@@ -98,7 +97,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="number"
-                    className=" border to-black  bg-slate-200 p-1  "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].EDAD}
                   />
                   <br />
@@ -111,7 +110,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="number"
-                    className=" border to-black  bg-slate-200 p-1  "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].ALTURA}
                   />
                   <br />
@@ -124,7 +123,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="number"
-                    className=" border to-black  bg-slate-200 p-1  "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].PESO}
                   />
                   <br />
@@ -134,11 +133,11 @@ export default function Interpretacion() {
           </section>
 
           <section>
-            <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2">
               <p className="mx-20 font-bold text-xl">
                 Información del servicio:
               </p>
-              <div className="flex justify-start space-x-6 mx-20">
+              <div className="flex justify-start space-x-6 mx-20 flex md:flex-wrap sm:flex-wrap">
                 <div>
                   <label className="uppercase font-bold" for="servicio">
                     Servicio:
@@ -146,7 +145,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].SERVICIO}
                   />
                   <br />
@@ -158,7 +157,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].PROCEDIMIENTO}
                   />
                   <br />
@@ -170,7 +169,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].ESTUDIO}
                   />
                   <br />
@@ -182,7 +181,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].SERVICIO}
                   />
                   <br />
@@ -192,9 +191,9 @@ export default function Interpretacion() {
           </section>
 
           <section>
-            <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2">
               <p className="mx-20 font-bold text-xl">Información del equipo:</p>
-              <div className="flex justify-start space-x-6 mx-20">
+              <div className="flex justify-start space-x-6 mx-20 flex md:flex-wrap sm:flex-wrap">
                 <div>
                   <label className="uppercase font-bold" for="equipo">
                     Equipo:
@@ -202,7 +201,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].EQUIPO}
                   />
                   <br />
@@ -215,7 +214,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].MARCA}
                   />
                   <br />
@@ -228,7 +227,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].MODELO}
                   />
                   <br />
@@ -241,7 +240,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].SERIAL}
                   />
                   <br />
@@ -254,7 +253,7 @@ export default function Interpretacion() {
                   <br />
                   <input
                     type="text"
-                    className=" border to-black  bg-slate-200 p-1 "
+                    className="border to-black rounded-md bg-violet-100 p-1"
                     value={radiografiasPacientes[0].CONSULTORIO}
                   />
                   <br />
@@ -264,11 +263,11 @@ export default function Interpretacion() {
           </section>
 
           <section>
-            <div className="border-2 border-indigo-200 my-2 mx-20 p-2 ">
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
               <p className="mx-20 font-bold text-xl">
                 Información del estudio:
               </p>
-              <div className="grid grid-cols-4 gap-4 mx-20 ">
+              <div className="grid lg:grid-cols-4 gap-4 mx-20 grid md:grid-cols-1">
                 <div>
                   <div>
                     <label className="uppercase font-bold" for="fecha">
@@ -277,7 +276,7 @@ export default function Interpretacion() {
                     <br />
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].FECHA}
                     />
                     <br />
@@ -289,7 +288,7 @@ export default function Interpretacion() {
                     <br />
                     <input
                       type="number"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].DOSIS}
                     />
                     <br />
@@ -301,7 +300,7 @@ export default function Interpretacion() {
                     <br />
                     <input
                       type="number"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].totalDosis}
                     />
                     <br />
@@ -316,7 +315,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].KV}
                     />
                     <br />
@@ -329,7 +328,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].MA}
                     />
                     <br />
@@ -342,7 +341,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].TIEMPO}
                     />
                     <br />
@@ -357,7 +356,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].tomasBuenas}
                     />
                     <br />
@@ -370,7 +369,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].tomasMalas}
                     />
                     <br />
@@ -383,7 +382,7 @@ export default function Interpretacion() {
 
                     <input
                       type="text"
-                      className=" border to-black  bg-slate-200 p-1 "
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       value={radiografiasPacientes[0].TOTAL}
                     />
                     <br />
@@ -393,7 +392,7 @@ export default function Interpretacion() {
                   <p className="font-bold text-lg">Causa repetición:</p>
                   <div>
                     <textarea
-                      className=" text-center bg-slate-200"
+                      className="border to-black rounded-md bg-violet-100 p-1"
                       rows="6"
                       value={radiografiasPacientes[0].causaRepeticion}
                     ></textarea>
@@ -404,13 +403,14 @@ export default function Interpretacion() {
           </section>
 
           <section>
-            <div className="border-2 border-indigo-200 my-2 mx-20 p-2">
-              <div className="flex justify-center">
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2 flex  md:flex-wrap sm:flex-wrap md:items-center 
+            lg:justify-center xl:justify-center">
+              <div className="">
                 <div>
                   <p className="font-bold text-lg">
                     Información quien realizo la muestra
                   </p>
-                  <div className="border-2 border-black p-4">
+                  <div className="border-2 border-violet-500 p-4">
                     <div>
                       <label className="uppercase font-bold" for="nombre">
                         Nombre Completo:
@@ -418,7 +418,7 @@ export default function Interpretacion() {
                       <br />
                       <input
                         type="text"
-                        className=" border to-black  bg-slate-200 p-1 "
+                        className="border to-black rounded-md bg-violet-100 p-1"
                         value={radiografiasPacientes[0].NombreProfesional}
                       />
                       <br />
@@ -430,7 +430,7 @@ export default function Interpretacion() {
                       <br />
                       <input
                         type="text"
-                        className=" border to-black  bg-slate-200 p-1 "
+                        className="border to-black rounded-md bg-violet-100 p-1"
                         value={radiografiasPacientes[0].documentoProfesional}
                       />
                       <br />
@@ -442,7 +442,7 @@ export default function Interpretacion() {
                       <br />
                       <input
                         type="text"
-                        className=" border to-black  bg-slate-200 p-1 "
+                        className="border to-black rounded-md bg-violet-100 p-1"
                         value={radiografiasPacientes[0].cargoProfesional}
                       />
                       <br />
@@ -451,7 +451,7 @@ export default function Interpretacion() {
                 </div>
                 <div >
                   <p className="font-bold text-lg ml-80" >Subir imagen</p>
-                  <div className=" border-2 border-black ml-52">
+                  <div className=" border-2 border-violet-500 ml-52">
                     <div>
                       <img
                         src={radiografiasPacientes[0].IMAGENES}
@@ -471,6 +471,6 @@ export default function Interpretacion() {
           </div>
         </form>
       </div>
-    </Layout>
+    </LayoutPrincipal>
   );
 }

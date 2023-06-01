@@ -8,7 +8,7 @@ export default function Vizualizacion() {
 
   return (
     <LayoutPrincipal login={true}>
-      <section className="bg-[#F4FFFE]">
+      <section className="bg-white">
         <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
           <ul className="grid gap-4 mt-16 sm:grid-cols-2 lg:grid-cols-3">
             {usuarios.map((user) => {
@@ -53,10 +53,10 @@ function Card(props) {
           </dl>
 
           <div className="mt-6 flex items-center gap-8 text-xs justify-center">
-            <button href="/Interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
-            
+            <a href="/interpretacion" className="w-1/3 h-min rounded-lg bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black py-1 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Visualizar paciente</a>
+            {/* <button onClick="/Interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
               Visualizar paciente
-            </button>
+            </button> */}
           </div>
         </div>
       </a>
