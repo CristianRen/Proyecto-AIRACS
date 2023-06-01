@@ -13,15 +13,15 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del paciente:</p>
-                            <div className="flex justify-start space-x-6 mx-20 py-2 flex  md:flex-wrap sm:flex-wrap">
-                                <div>
+                            <div className="flex justify-start flex-between ms-auto mr-3 py-2 flex  md:flex-wrap sm:flex-wrap">
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="nombre">
                                         Nombres:
                                     </label>
                                     <br />
                                     <input
                                         type="text"
-                                        className="border to-black rounded-md bg-violet-100 p-1"
+                                        className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Escribe tus nombres"
                                     />
                                     <br />
@@ -38,7 +38,7 @@ export default function UploadData() {
                                     />
                                     <br />
                                 </div>
-                                <div>
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="id">
                                         Tipo de documento:
                                     </label>
@@ -51,24 +51,24 @@ export default function UploadData() {
                                         <option value="Otro">Otro Documento</option>
                                     </select>
                                 </div>
-                                <div>
-                                    <label className="uppercase font-bold" for="#id">
+                                <div className="ml-6">
+                                    <label className="uppercase font-bold mr-3" for="#id">
                                         Numero de documento:
                                     </label>
                                     <br />
                                     <input
-                                        className="border to-black rounded-md bg-violet-100 p-1"
+                                        className="border to-black rounded-md bg-violet-100 ms-auto mr-3 p-1"
                                         type="number"
                                         placeholder="Escribe tu documento"
                                     />
                                     <br />
                                 </div>
-                                <div>
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="sexo">
                                         Sexo:
                                     </label>
                                     <br />
-                                    <select className="border to-black rounded-md bg-violet-100 p-1.5 " id="id">
+                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id">
                                         <option value="F">Femenino</option>
                                         <option value="M">Másculino</option>
                                     </select>
@@ -77,9 +77,9 @@ export default function UploadData() {
 
                             <div
                                 name="Linea # 2"
-                                className="flex justify-start space-x-6  mx-20  flex  md:flex-wrap sm:flex-wrap"
+                                className="flex justify-start space-x-6 flex  md:flex-wrap sm:flex-wrap"
                             >
-                                <div>
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="edad">
                                         Edad:
                                     </label>
@@ -92,8 +92,8 @@ export default function UploadData() {
                                     <br />
                                 </div>
 
-                                <div>
-                                    <label className="uppercase font-bold" for="altura">
+                                <div className="ml-0">
+                                    <label className="uppercase font-bold ml-0" for="altura">
                                         Altura:
                                     </label>
                                     <br />
@@ -105,14 +105,14 @@ export default function UploadData() {
                                     <br />
                                 </div>
 
-                                <div>
+                                <div className="ml-0">
                                     <label className="uppercase font-bold" for="peso">
                                         Peso:
                                     </label>
                                     <br />
                                     <input
                                         type="number"
-                                        className=" border to-black rounded-md bg-violet-100 p-1 p-1  "
+                                        className=" border to-black rounded-md bg-violet-100 ms-auto mr-3 p-1  "
                                         placeholder="Escribe tu peso"
                                     />
                                     <br />
@@ -124,8 +124,8 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del servicio:</p>
-                            <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap">
-                                <div>
+                            <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap ms-auto mr-3">
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="servicio">
                                         Servicio:
                                     </label>
@@ -149,14 +149,14 @@ export default function UploadData() {
                                     />
                                     <br />
                                 </div>
-                                <div>
-                                    <label className="uppercase font-bold" for="estudio">
+                                <div className="mx-0">
+                                    <label className="uppercase font-bold ml-0" for="estudio">
                                         Tipo de estudio:
                                     </label>
                                     <br />
                                     <input
                                         type="text"
-                                        className="border to-black rounded-md bg-violet-100 p-1"
+                                        className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Escribe el tipo de estudio"
                                     />
                                     <br />
@@ -169,7 +169,7 @@ export default function UploadData() {
                                     <input
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
-                                        placeholder="Escribe tus nombres"
+                                        placeholder="zonas bucales tomada"
                                     />
                                     <br />
                                 </div>
@@ -180,15 +180,15 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2">
                             <p className="mx-20 font-bold text-xl">Información del equipo:</p>
-                            <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap">
-                                <div>
+                            <div className="flex justify-start space-x-6 flex  md:flex-column sm:flex-wrap">
+                                <div className="ml-6">
                                     <label className="uppercase font-bold" for="equipo">
                                         Equipo:
                                     </label>
                                     <br />
                                     <input
                                         type="text"
-                                        className="border to-black rounded-md bg-violet-100 p-1"
+                                        className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Nombre del equipo"
                                     />
                                     <br />
@@ -202,25 +202,25 @@ export default function UploadData() {
                                     <input
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
-                                        placeholder="Nombre de la marca"
+                                        placeholder="escribe la marca"
                                     />
                                     <br />
                                 </div>
 
-                                <div>
+                                <div className="ml-0">
                                     <label className="uppercase font-bold" for="modelo">
                                         Modelo:
                                     </label>
                                     <br />
                                     <input
                                         type="text"
-                                        className="border to-black rounded-md bg-violet-100 p-1"
-                                        placeholder="Nombre del modelo"
+                                        className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
+                                        placeholder="escribe el modelo"
                                     />
                                     <br />
                                 </div>
 
-                                <div>
+                                 <div className="">
                                     <label className="uppercase font-bold" for="serial">
                                         Serial:
                                     </label>
@@ -228,7 +228,7 @@ export default function UploadData() {
                                     <input
                                         type="number"
                                         className="border to-black rounded-md bg-violet-100 p-1"
-                                        placeholder="Número serial"
+                                        placeholder="escribe el serial"
                                     />
                                     <br />
                                 </div>
@@ -241,7 +241,7 @@ export default function UploadData() {
                                     <input
                                         type="number"
                                         className="border to-black rounded-md bg-violet-100 p-1"
-                                        placeholder="Número del consultorio"
+                                        placeholder="ubicación del equipo"
                                     />
                                     <br />
                                 </div>
@@ -252,8 +252,8 @@ export default function UploadData() {
                     <section>
                         <div className="border-2 border-violet-500 my-2 mx-20 p-2 ">
                             <p className="mx-20 font-bold text-xl">Información del estudio:</p>
-                            <div className="grid lg:grid-cols-4 gap-4 mx-20 grid md:grid-cols-1">
-                                <div>
+                            <div className="grid lg:grid-cols-4 gap-4 grid md:grid-cols-1 ml-6">
+                                <div className="sm:text-center md:text-center">
                                     <div>
                                         <label className="uppercase font-bold" for="fecha">
                                             Fecha Toma:
@@ -285,22 +285,22 @@ export default function UploadData() {
                                         <input
                                             type="number"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de dosis total"
+                                            placeholder="total dosis recibida"
                                         />
                                         <br />
                                     </div>
                                 </div>
-                                <div>
-                                    <p className="font-bold text-lg">Tecnica de la imagen:</p>
+                                <div className="sm:text-center md:text-center">
+                                    <p className="font-bold text-lg">Técnica de la imagen:</p>
                                     <div>
                                         <label className="uppercase font-bold" for="totalDosis">
-                                            KV :
+                                            kV :
                                         </label>
 
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de dosis total"
+                                            placeholder="voltaje del tubo"
                                         />
                                         <br />
                                     </div>
@@ -313,25 +313,25 @@ export default function UploadData() {
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de dosis total"
+                                            placeholder="corriente del tubo"
                                         />
                                         <br />
                                     </div>
                                     <br />
                                     <div>
                                         <label className="font-bold" for="t(s)">
-                                            t(S) :
+                                            t(s) :
                                         </label>
 
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de dosis total"
+                                            placeholder="tiempo expuesto"
                                         />
                                         <br />
                                     </div>
                                 </div>
-                                <div>
+                                <div className="sm:text-center md:text-center">
                                     <p className="font-bold text-lg">Número de tomas:</p>
                                     <div>
                                         <label className="uppercase font-bold" for="buenas">
@@ -341,7 +341,7 @@ export default function UploadData() {
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de tomas buenas"
+                                            placeholder="Número tomas buenas"
                                         />
                                         <br />
                                     </div>
@@ -354,7 +354,7 @@ export default function UploadData() {
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de tomas malas"
+                                            placeholder="Número tomas malas"
                                         />
                                         <br />
                                     </div>
@@ -367,15 +367,15 @@ export default function UploadData() {
                                         <input
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
-                                            placeholder="Cantidad de tomas total"
+                                            placeholder="Número total de tomas"
                                         />
                                         <br />
                                     </div>
                                 </div>
-                                <div>
+                                <div className="sm:text-center md:text-center">
                                     <p className="font-bold text-lg">Causa repetición:</p>
                                     <div>
-                                        <textarea className=" bg-violet-100" rows="6"></textarea>
+                                        <textarea className=" bg-violet-100 p-1" rows="6" placeholder="Describa la causa que generó más de una toma"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className="border to-black rounded-md bg-violet-100 p-1"
+                                                className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese nombre completo"
                                             />
                                             <br />
@@ -409,7 +409,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className="border to-black rounded-md bg-violet-100 p-1"
+                                                className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese Cedula"
                                             />
                                             <br />
@@ -421,7 +421,7 @@ export default function UploadData() {
                                             <br />
                                             <input
                                                 type="text"
-                                                className="border to-black rounded-md bg-violet-100 p-1"
+                                                className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese su cargo"
                                             />
                                             <br />

@@ -17,8 +17,8 @@ export default function Interpretacion() {
               <p className="mx-20 font-bold text-xl">
                 Información del paciente:
               </p>
-              <div className="flex justify-start space-x-6 mx-20 py-2 flex  md:flex-wrap sm:flex-wrap">
-                <div>
+              <div className="flex justify-start py-2 flex  md:flex-wrap sm:flex-wrap">
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="nombre">
                     Nombres:
                   </label>
@@ -29,7 +29,7 @@ export default function Interpretacion() {
                   />
                   <br />
                 </div>
-                <div>
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="apellido">
                     Apellidos:
                   </label>
@@ -41,7 +41,7 @@ export default function Interpretacion() {
                   />
                   <br />
                 </div>
-                <div>
+                <div className="ml-6" >
                   <label className="uppercase font-bold" for="id">
                     Tipo de identidad:
                   </label>
@@ -59,7 +59,7 @@ export default function Interpretacion() {
                     <option value="Otro">Otro Documento</option>
                   </select>
                 </div>
-                <div>
+                <div className="ml-6" >
                   <label className="uppercase font-bold" for="#id">
                     Documento de identidad:
                   </label>
@@ -71,7 +71,7 @@ export default function Interpretacion() {
                   />
                   <br />
                 </div>
-                <div>
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="sexo">
                     Sexo:
                   </label>
@@ -88,9 +88,9 @@ export default function Interpretacion() {
 
               <div
                 name="Linea # 2"
-                className="flex justify-start space-x-6  mx-20  flex md:flex-wrap sm:flex-wrap"
+                className="flex justify-start flex md:flex-wrap sm:flex-wrap"
               >
-                <div>
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="edad">
                     Edad:
                   </label>
@@ -103,7 +103,7 @@ export default function Interpretacion() {
                   <br />
                 </div>
 
-                <div>
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="altura">
                     Altura:
                   </label>
@@ -116,7 +116,7 @@ export default function Interpretacion() {
                   <br />
                 </div>
 
-                <div>
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="peso">
                     Peso:
                   </label>
@@ -137,8 +137,8 @@ export default function Interpretacion() {
               <p className="mx-20 font-bold text-xl">
                 Información del servicio:
               </p>
-              <div className="flex justify-start space-x-6 mx-20 flex md:flex-wrap sm:flex-wrap">
-                <div>
+              <div className="flex justify-start space-x-6 flex md:flex-wrap sm:flex-wrap">
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="servicio">
                     Servicio:
                   </label>
@@ -176,13 +176,13 @@ export default function Interpretacion() {
                 </div>
                 <div>
                   <label className="uppercase font-bold" for="servicio">
-                    Servicio:
+                    ZONA BUCAL:
                   </label>
                   <br />
                   <input
                     type="text"
                     className="border to-black rounded-md bg-violet-100 p-1"
-                    value={radiografiasPacientes[0].SERVICIO}
+                    value={radiografiasPacientes[0].ZONA}
                   />
                   <br />
                 </div>
@@ -193,8 +193,8 @@ export default function Interpretacion() {
           <section>
             <div className="border-2 border-violet-500 my-2 mx-20 p-2">
               <p className="mx-20 font-bold text-xl">Información del equipo:</p>
-              <div className="flex justify-start space-x-6 mx-20 flex md:flex-wrap sm:flex-wrap">
-                <div>
+              <div className="flex justify-start space-x-6 flex md:flex-wrap sm:flex-wrap">
+                <div className="ml-6">
                   <label className="uppercase font-bold" for="equipo">
                     Equipo:
                   </label>
@@ -267,8 +267,8 @@ export default function Interpretacion() {
               <p className="mx-20 font-bold text-xl">
                 Información del estudio:
               </p>
-              <div className="grid lg:grid-cols-4 gap-4 mx-20 grid md:grid-cols-1">
-                <div>
+              <div className="grid lg:grid-cols-4 gap-4 grid md:grid-cols-1">
+                <div className="lg:text-left sm:text-center md:text-center">
                   <div>
                     <label className="uppercase font-bold" for="fecha">
                       Fecha Toma:
@@ -306,8 +306,8 @@ export default function Interpretacion() {
                     <br />
                   </div>
                 </div>
-                <div>
-                  <p className="font-bold text-lg">Tecnica de la imagen:</p>
+                <div className="sm:text-center md:text-center">
+                  <p className="font-bold text-lg">Técnica de la imagen:</p>
                   <div>
                     <label className="uppercase font-bold" for="totalDosis">
                       KV :
@@ -347,7 +347,7 @@ export default function Interpretacion() {
                     <br />
                   </div>
                 </div>
-                <div>
+                <div className="lg:text-left sm:text-center md:text-center">
                   <p className="font-bold text-lg">Número de tomas:</p>
                   <div>
                     <label className="uppercase font-bold" for="buenas">
@@ -388,7 +388,7 @@ export default function Interpretacion() {
                     <br />
                   </div>
                 </div>
-                <div>
+                <div className="sm:text-center md:text-center">
                   <p className="font-bold text-lg">Causa repetición:</p>
                   <div>
                     <textarea
@@ -403,15 +403,14 @@ export default function Interpretacion() {
           </section>
 
           <section>
-            <div className="border-2 border-violet-500 my-2 mx-20 p-2 flex  md:flex-wrap sm:flex-wrap md:items-center 
-            lg:justify-center xl:justify-center">
-              <div className="">
+            <div className="border-2 border-violet-500 my-2 mx-20 flex  md:flex-wrap sm:flex-wrap md:justify-center sm:justify-center h-min">
+              <div className="grid lg:grid-cols-2 flex md:flex-column">
                 <div>
                   <p className="font-bold text-lg">
-                    Información quien realizo la muestra
+                    Información quién realiza la muestra
                   </p>
-                  <div className="border-2 border-violet-500 p-4">
-                    <div>
+                  <div className="border-2 border-violet-500 p-4 lg:ml-0 md:ml-20 sm:ml-20 w-fit">
+                    <div className="">
                       <label className="uppercase font-bold" for="nombre">
                         Nombre Completo:
                       </label>
@@ -449,10 +448,10 @@ export default function Interpretacion() {
                     </div>
                   </div>
                 </div>
-                <div >
-                  <p className="font-bold text-lg ml-80" >Subir imagen</p>
-                  <div className=" border-2 border-violet-500 ml-52">
-                    <div>
+                <div className="ml-auto mr-0">
+                  <p className="font-bold text-lg " >Imágen del paciente</p>
+                  <div className=" border-2 border-violet-500 ">
+                    <div className="">
                       <img
                         src={radiografiasPacientes[0].IMAGENES}
                         alt="Descripción de la imagen"
