@@ -59,10 +59,10 @@ function Card(props) {
           </dl>
 
           <div className="mt-6 flex items-center gap-8 text-xs justify-center">
-            {/* <a href="/interpretacion" className="w-1/3 h-min rounded-lg bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black py-1 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Visualizar paciente</a> */}
-            <button onClick="/interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
+            <a href="/interpretacion" className="w-1/3 h-min rounded-lg bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black py-1 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Visualizar paciente</a>
+            {/* <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
               Visualizar paciente
-            </button>
+            </button> */}
           </div>
         </div>
       </a>

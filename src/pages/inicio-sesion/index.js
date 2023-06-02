@@ -32,14 +32,14 @@ export default function InicioSesion() {
                             <form>
                                 <h3 className="p-5 w-full text-center xl:text-3xl font-bold text-gray-900 lg:text-l">INICIAR SESIÓN</h3>
 
-                                <label for="user">
+                                <label>
                                     <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">USUARIO:</h3>
                                 </label>
                                 <input className="  mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1"
                                     placeholder="Escriba su nombre de usuario" type="texto" id="" name="usuario" value={botonactivo.usuario} onChange={handleChange} required /><br /><br />
                             </form>
 
-                            <label for="razon-social">
+                            <label>
                                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">CONTRASEÑA:</h3>
                             </label>
                             <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1  "

@@ -15,6 +15,10 @@ export default function PaginaPrincipal() {
     })
   }
 
+  const onSubmit =() =>{
+    console.log(botonactivo)
+  }
+
   const datosEnviados = () => {
     alert("Hemos recibido tus datos, nos contactaremos contigo lo más pronto posible")
   }
@@ -47,34 +51,34 @@ export default function PaginaPrincipal() {
               <form>
                 <h3 className=" p-5 w-full text-center xl:text-3xl font-bold text-gray-900 lg:text-2xl">CONTACTANOS</h3>
 
-                <label for="nit">
+                <label>
                   <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l" >NIT:</h3>
                 </label>
                 <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1"
                   placeholder="Escribe tu NIT" value={botonactivo.NIT} type="number" id="nit" name="NIT" onChange={handleChange} required /><br /><br />
               </form>
 
-              <label for="razon-social">
+              <label>
                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">RAZON SOCIAL:</h3>
               </label>
               <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe el nombre de la empresa" type="text" value={botonactivo.razonSocial} id="razon-social" name="razonSocial" onChange={handleChange} required /><br /><br />
 
-              <label for="ciudad">
+              <label>
                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">CIUDAD:</h3>
               </label>
               <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe ciudad de residencia" type="text" value={botonactivo.CIUDAD} id="ciudad" name="CIUDAD" onChange={handleChange} required /><br /><br />
 
-              <label for="direccion">
+              <label>
                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">DIRECCIÓN:</h3>
               </label>
               <input className="mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe tu dirección" type="text" value={botonactivo.DIRECCION} id="direccion" name="DIRECCION" onChange={handleChange} required /><br /><br />
 
-              <label for="telefono">
+              <label>
                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">TELÉFONO:</h3>
               </label>
               <input className=" mx-10 w-5/6 border to-black rounded-md bg-violet-100 flex items-stretch p-1 " placeholder="Escribe tu número de contacto" type="text" value={botonactivo.TELEFONO} id="telefono" name="TELEFONO" onChange={handleChange} required /><br /><br />
 
-              <label for="correo">
+              <label>
                 <h3 className="mx-10 my-1 text-lefth xl:text-xl font-bold text-gray-900 lg:text-l">CORREO ELECTRÓNICO:</h3>
               </label>
               <input className=" mx-10 w-5/6 to-black rounded-md bg-violet-100 flex items-stretch p-1" placeholder="Escribe tu correo corporativo" value={botonactivo.EMAIL} type="text" id="correo" name="EMAIL" onChange={handleChange} required /><br /><br />
@@ -82,7 +86,7 @@ export default function PaginaPrincipal() {
               <div className="flex flex-row">
                 <input className={`${botonactivo.button}  mx-10 w-5 border to-black rounded-md bg-indigo-200 p-1`} type="radio" id="agree" name="agree" onClick={() => onSubmit()} required /><br /><br />
 
-                <label className="mr-10 my-1 mt-2  text-justify text-gray-500 xl:text-l lg:text-l md:text-sm sm:text-xs" for="agree" required>Aceptar políticas de tratamiento de datos</label>
+                <label className="mr-10 my-1 mt-2  text-justify text-gray-500 xl:text-l lg:text-l md:text-sm sm:text-xs" required>Aceptar políticas de tratamiento de datos</label>
 
               </div>
               <div className="flex justify-center">

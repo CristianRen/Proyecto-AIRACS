@@ -1,10 +1,33 @@
 import LayoutPrincipal from "@/components/menu-principal/layout-principal";
 import "./globals.css"
+import { useState } from "react";
+
 export default function UploadData() {
+
+    const [botonactivo, setbotonactivo] = useState(
+        { NOMBRES: "", APELLIDOS: "", tipoDocumento: "", numeroCedula: "", SEXO: "", EDAD: "", ALTURA: "", PESO: "", SERVICIO: "", PROCEDIMIENTO: "", ESTUDIO: "", ZONA: "", EQUIPO: "", MARCA: "", MODELO: "", SERIAL: "", CONSULTORIO: "", FECHA: "", DOSIS: "", TotalDosis: "", KV: "", MA: "", TIEMPO: "", BUENAS: "", MALAS: "", TOTAL: "", CAUSA: "", NombreProfesional: "", CedulaProfesional: "", CARGO: "", IMAGEN: "" });
+
+    const handleChange = (evento) => {
+        console.log(evento.target.value);
+        setbotonactivo({
+            ...botonactivo,
+            [evento.target.name]: evento.target.value
+        })
+    }
+
+    const onSubmit =() =>{
+        console.log(botonactivo)
+      }
+    
+      const datosEnviados = () => {
+        alert("Información correctamente almacenada")
+      }
+
     return (
         <LayoutPrincipal login={true}>
             <div className="bg-white  ">
-                <form action="/visualizacion">
+                {/* <form action="/visualizacion"> */}
+                <form>
                     <div>
                         <strong className="flex justify-center uppercase underline my-2 text-2xl">
                             Registro pacientes
@@ -15,7 +38,7 @@ export default function UploadData() {
                             <p className="mx-20 font-bold text-xl">Información del paciente:</p>
                             <div className="flex justify-start flex-between ms-auto mr-3 py-2 flex  md:flex-wrap sm:flex-wrap">
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="nombre">
+                                    <label className="uppercase font-bold">
                                         Nombres:
                                     </label>
                                     <br />
@@ -23,11 +46,14 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Escribe tus nombres"
+                                        name="NOMBRES"
+                                        value={botonactivo.NOMBRES}
+                                        onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div>
-                                    <label className="uppercase font-bold" for="apellido">
+                                    <label className="uppercase font-bold">
                                         Apellidos:
                                     </label>
                                     <br />
@@ -35,16 +61,19 @@ export default function UploadData() {
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         type="text"
                                         placeholder="Escribe tus apellidos"
+                                        name="APELLIDOS"
+                                        value={botonactivo.APELLIDOS}
+                                        onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="id">
+                                    <label className="uppercase font-bold">
                                         Tipo de documento:
                                     </label>
                                     <br />
 
-                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id">
+                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id" name="tipoDocumento" value={botonactivo.tipoDocumento} onChange={handleChange}>
                                         <option value="tj-id">Tarjeta de identidad</option>
                                         <option value="cc">Cedula</option>
                                         <option value="Pasaporte">Pasaporte</option>
@@ -52,7 +81,7 @@ export default function UploadData() {
                                     </select>
                                 </div>
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold mr-3" for="#id">
+                                    <label className="uppercase font-bold mr-3">
                                         Numero de documento:
                                     </label>
                                     <br />
@@ -60,15 +89,18 @@ export default function UploadData() {
                                         className="border to-black rounded-md bg-violet-100 ms-auto mr-3 p-1"
                                         type="number"
                                         placeholder="Escribe tu documento"
+                                        name="numeroCedula"
+                                        value={botonactivo.numeroCedula}
+                                        onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="sexo">
+                                    <label className="uppercase font-bold" >
                                         Sexo:
                                     </label>
                                     <br />
-                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id">
+                                    <select className="border to-black rounded-md bg-violet-100 p-1.5" id="id" name="SEXO" value={botonactivo.SEXO} onChange={handleChange}>
                                         <option value="F">Femenino</option>
                                         <option value="M">Másculino</option>
                                     </select>
@@ -80,7 +112,7 @@ export default function UploadData() {
                                 className="flex justify-start space-x-6 flex  md:flex-wrap sm:flex-wrap"
                             >
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="edad">
+                                    <label className="uppercase font-bold">
                                         Edad:
                                     </label>
                                     <br />
@@ -88,12 +120,15 @@ export default function UploadData() {
                                         type="number"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tu edad"
+                                        name="EDAD"
+                                        value={botonactivo.EDAD}
+                                        onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
                                 <div className="ml-0">
-                                    <label className="uppercase font-bold ml-0" for="altura">
+                                    <label className="uppercase font-bold ml-0" >
                                         Altura:
                                     </label>
                                     <br />
@@ -101,12 +136,13 @@ export default function UploadData() {
                                         type="number"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe tu altura"
+                                        name="ALTURA" value={botonactivo.ALTURA} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
                                 <div className="ml-0">
-                                    <label className="uppercase font-bold" for="peso">
+                                    <label className="uppercase font-bold">
                                         Peso:
                                     </label>
                                     <br />
@@ -114,6 +150,7 @@ export default function UploadData() {
                                         type="number"
                                         className=" border to-black rounded-md bg-violet-100 ms-auto mr-3 p-1  "
                                         placeholder="Escribe tu peso"
+                                        name="PESO" value={botonactivo.PESO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
@@ -126,7 +163,7 @@ export default function UploadData() {
                             <p className="mx-20 font-bold text-xl">Información del servicio:</p>
                             <div className="flex justify-start space-x-6 mx-20 flex  md:flex-wrap sm:flex-wrap ms-auto mr-3">
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="servicio">
+                                    <label className="uppercase font-bold" >
                                         Servicio:
                                     </label>
                                     <br />
@@ -134,11 +171,12 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe el servicio"
+                                        name="SERVICIO" value={botonactivo.SERVICIO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div>
-                                    <label className="uppercase font-bold" for="procedimiento">
+                                    <label className="uppercase font-bold" >
                                         Procedimiento a realizar:
                                     </label>
                                     <br />
@@ -146,11 +184,12 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="Escribe el procedimiento"
+                                        name="PROCEDIMIENTO" value={botonactivo.PROCEDIMIENTO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div className="mx-0">
-                                    <label className="uppercase font-bold ml-0" for="estudio">
+                                    <label className="uppercase font-bold ml-0" >
                                         Tipo de estudio:
                                     </label>
                                     <br />
@@ -158,11 +197,12 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Escribe el tipo de estudio"
+                                        name="ESTUDIO" value={botonactivo.ESTUDIO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
                                 <div>
-                                    <label className="uppercase font-bold" for="servicio">
+                                    <label className="uppercase font-bold" >
                                         zona bucal:
                                     </label>
                                     <br />
@@ -170,6 +210,7 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="zonas bucales tomada"
+                                        name="ZONA" value={botonactivo.ZONA} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
@@ -182,7 +223,7 @@ export default function UploadData() {
                             <p className="mx-20 font-bold text-xl">Información del equipo:</p>
                             <div className="flex justify-start space-x-6 flex  md:flex-column sm:flex-wrap">
                                 <div className="ml-6">
-                                    <label className="uppercase font-bold" for="equipo">
+                                    <label className="uppercase font-bold" >
                                         Equipo:
                                     </label>
                                     <br />
@@ -190,12 +231,13 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="Nombre del equipo"
+                                        name="EQUIPO" value={botonactivo.EQUIPO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
                                 <div>
-                                    <label className="uppercase font-bold" for="marca">
+                                    <label className="uppercase font-bold" >
                                         Marca:
                                     </label>
                                     <br />
@@ -203,12 +245,13 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="escribe la marca"
+                                        name="MARCA" value={botonactivo.MARCA} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
                                 <div className="ml-0">
-                                    <label className="uppercase font-bold" for="modelo">
+                                    <label className="uppercase font-bold">
                                         Modelo:
                                     </label>
                                     <br />
@@ -216,32 +259,35 @@ export default function UploadData() {
                                         type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1 ms-auto mr-3"
                                         placeholder="escribe el modelo"
+                                        name="MODELO" value={botonactivo.MODELO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
-                                 <div className="">
-                                    <label className="uppercase font-bold" for="serial">
+                                <div className="">
+                                    <label className="uppercase font-bold">
                                         Serial:
                                     </label>
                                     <br />
                                     <input
-                                        type="number"
+                                        type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="escribe el serial"
+                                        name="SERIAL" value={botonactivo.SERIAL} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
 
                                 <div>
-                                    <label className="uppercase font-bold" for="consultorio">
+                                    <label className="uppercase font-bold" >
                                         Consultorio:
                                     </label>
                                     <br />
                                     <input
-                                        type="number"
+                                        type="text"
                                         className="border to-black rounded-md bg-violet-100 p-1"
                                         placeholder="ubicación del equipo"
+                                        name="CONSULTORIO" value={botonactivo.CONSULTORIO} onChange={handleChange}
                                     />
                                     <br />
                                 </div>
@@ -255,18 +301,19 @@ export default function UploadData() {
                             <div className="grid lg:grid-cols-4 gap-4 grid md:grid-cols-1 ml-6">
                                 <div className="sm:text-center md:text-center">
                                     <div>
-                                        <label className="uppercase font-bold" for="fecha">
+                                        <label className="uppercase font-bold">
                                             Fecha Toma:
                                         </label>
                                         <br />
                                         <input
                                             type="date"
                                             className="border to-black rounded-md bg-violet-100 p-1"
+                                            name="FECHA" value={botonactivo.FECHA} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <div>
-                                        <label className="uppercase font-bold" for="dosis">
+                                        <label className="uppercase font-bold" >
                                             Dosis:
                                         </label>
                                         <br />
@@ -274,11 +321,12 @@ export default function UploadData() {
                                             type="number"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Cantidad dosis"
+                                            name="DOSIS" value={botonactivo.DOSIS} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <div>
-                                        <label className="uppercase font-bold" for="totalDosis">
+                                        <label className="uppercase font-bold" >
                                             Total Dosis:
                                         </label>
                                         <br />
@@ -286,6 +334,7 @@ export default function UploadData() {
                                             type="number"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="total dosis recibida"
+                                            name="TotalDosis" value={botonactivo.TotalDosis} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
@@ -293,7 +342,7 @@ export default function UploadData() {
                                 <div className="sm:text-center md:text-center">
                                     <p className="font-bold text-lg">Técnica de la imagen:</p>
                                     <div>
-                                        <label className="uppercase font-bold" for="totalDosis">
+                                        <label className="uppercase font-bold">
                                             kV :
                                         </label>
 
@@ -301,12 +350,13 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="voltaje del tubo"
+                                            name="KV" value={botonactivo.KV} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <br />
                                     <div>
-                                        <label className=" font-bold" for="ma">
+                                        <label className=" font-bold" >
                                             mA :
                                         </label>
 
@@ -314,12 +364,13 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="corriente del tubo"
+                                            name="MA" value={botonactivo.MA} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <br />
                                     <div>
-                                        <label className="font-bold" for="t(s)">
+                                        <label className="font-bold">
                                             t(s) :
                                         </label>
 
@@ -327,6 +378,7 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="tiempo expuesto"
+                                            name="TIEMPO" value={botonactivo.TIEMPO} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
@@ -334,7 +386,7 @@ export default function UploadData() {
                                 <div className="sm:text-center md:text-center">
                                     <p className="font-bold text-lg">Número de tomas:</p>
                                     <div>
-                                        <label className="uppercase font-bold" for="buenas">
+                                        <label className="uppercase font-bold" >
                                             Buenas :
                                         </label>
 
@@ -342,12 +394,13 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Número tomas buenas"
+                                            name="BUENAS" value={botonactivo.BUENAS} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <br />
                                     <div>
-                                        <label className="uppercase font-bold" for="mala">
+                                        <label className="uppercase font-bold" >
                                             Malas :
                                         </label>
 
@@ -355,12 +408,13 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Número tomas malas"
+                                            name="MALAS" value={botonactivo.MALAS} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
                                     <br />
                                     <div>
-                                        <label className="uppercase font-bold" for="Total">
+                                        <label className="uppercase font-bold">
                                             Total :
                                         </label>
 
@@ -368,6 +422,7 @@ export default function UploadData() {
                                             type="text"
                                             className="border to-black rounded-md bg-violet-100 p-1"
                                             placeholder="Número total de tomas"
+                                            name="TOTAL" value={botonactivo.TOTAL} onChange={handleChange}
                                         />
                                         <br />
                                     </div>
@@ -375,7 +430,7 @@ export default function UploadData() {
                                 <div className="sm:text-center md:text-center">
                                     <p className="font-bold text-lg">Causa repetición:</p>
                                     <div>
-                                        <textarea className=" bg-violet-100 p-1" rows="6" placeholder="Describa la causa que generó más de una toma"></textarea>
+                                        <textarea className=" bg-violet-100 p-1" rows="6" placeholder="Describa la causa que generó más de una toma" name="CAUSA" value={botonactivo.CAUSA} onChange={handleChange}></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -391,7 +446,7 @@ export default function UploadData() {
                                     </p>
                                     <div className="border-2 border-violet-500 p-4">
                                         <div>
-                                            <label className="uppercase font-bold" for="nombre">
+                                            <label className="uppercase font-bold" >
                                                 Nombre Completo:
                                             </label>
                                             <br />
@@ -399,11 +454,12 @@ export default function UploadData() {
                                                 type="text"
                                                 className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese nombre completo"
+                                                name="NombreProfesional" value={botonactivo.NombreProfesional} onChange={handleChange}
                                             />
                                             <br />
                                         </div>
                                         <div>
-                                            <label className="uppercase font-bold" for="cc">
+                                            <label className="uppercase font-bold" >
                                                 Cedula:
                                             </label>
                                             <br />
@@ -411,11 +467,12 @@ export default function UploadData() {
                                                 type="text"
                                                 className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese Cedula"
+                                                name="CedulaProfesional" value={botonactivo.CedulaProfesional} onChange={handleChange}
                                             />
                                             <br />
                                         </div>
                                         <div>
-                                            <label className="uppercase font-bold" for="cargo">
+                                            <label className="uppercase font-bold">
                                                 Cargo:
                                             </label>
                                             <br />
@@ -423,6 +480,7 @@ export default function UploadData() {
                                                 type="text"
                                                 className="border to-black rounded-md bg-violet-100 p-1 w-2/4"
                                                 placeholder="Ingrese su cargo"
+                                                name="CARGO" value={botonactivo.CARGO} onChange={handleChange}
                                             />
                                             <br />
                                         </div>
@@ -433,23 +491,27 @@ export default function UploadData() {
                                     <div className="border-2 border-violet-500 p-20">
                                         <input
                                             type="file"
-                                            class="block w-full text-sm text-slate-500
+                                            className="block w-full text-sm text-slate-500
                         file:mr-4 file:py-2 file:px-4
                         file:rounded-full file:border-0
                         file:text-sm file:font-semibold
                        file:bg-violet-200 file:text-violet-700
-                       hover:file:bg-violet-100
+                       hover:file:bg-violet-100S
                        p-2
                         "
+                        name="IMAGEN" value={botonactivo.IMAGEN} onChange={handleChange}
                                         />
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <div className="flex justify-center">
-                        <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
-                            Enviar información
+                    <div className="flex flex-row justify-center">
+                        <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2" onClick={() => onSubmit()}>
+                            Guardar
+                        </button>
+                        <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2" onClick={() => datosEnviados()}>   
+                            Enviar
                         </button>
                     </div>
                 </form>
