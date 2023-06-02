@@ -5,7 +5,6 @@ import usuarios from "./array-objetos";
 
 export default function Vizualizacion() {
 
-
   return (
     <LayoutPrincipal login={true}>
       <section className="bg-white">
@@ -36,11 +35,18 @@ function Card(props) {
 
         <div className="mt-2">
           <dl>
-            <div>
+          <div>
               <dt className="sr-only">Address</dt>
 
               <dd className="text-black text-center font-medium">
                 {props.user.NOMBRES}
+              </dd>
+            </div>
+            <div>
+              <dt className="sr-only">Address</dt>
+
+              <dd className="text-black text-center font-medium">
+                {props.user.APELLIDOS}
               </dd>
             </div>
             <div>
@@ -53,10 +59,10 @@ function Card(props) {
           </dl>
 
           <div className="mt-6 flex items-center gap-8 text-xs justify-center">
-            <a href="/interpretacion" className="w-1/3 h-min rounded-lg bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black py-1 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Visualizar paciente</a>
-            {/* <button onClick="/Interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
+            {/* <a href="/interpretacion" className="w-1/3 h-min rounded-lg bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black py-1 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Visualizar paciente</a> */}
+            <button onClick="/interpretacion" className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
               Visualizar paciente
-            </button> */}
+            </button>
           </div>
         </div>
       </a>

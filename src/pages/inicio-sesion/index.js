@@ -15,6 +15,13 @@ export default function InicioSesion() {
         })
     }
 
+    // const validarDatos = (e) => {
+    //     return (
+    //         botonactivo.usuario == "camila" ? e=(true) : e=(false)
+    //     )
+    // }
+    
+
     return (
         <LayoutPrincipal>
             <>
@@ -51,7 +58,7 @@ export default function InicioSesion() {
                             <div className="flex justify-center ">
                                 {/* <input className={`${botonactivo.button}  w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2`} id="submit-botom" type="submit" value="Ingresar" on={onSubmit}
                                     onDoubleClick={comparacion}></input> */}
-                                <a href="/subida-informacion" className="w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit" value="Ingresar" >Ingresar</a>
+                                <a href="/subida-informacion" className="w-1/3 rounded-full bg-[#B799FF] text-white hover:bg-violet-200 hover:text-black p-4 my-2 text-center md:text-sm sm:text-xs" id="submit-botom" type="submit"  value="Ingresar">Ingresar</a>
                             </div>
                         </div>
                     </div>

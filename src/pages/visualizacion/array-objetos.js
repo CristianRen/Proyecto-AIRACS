@@ -139,7 +139,7 @@ const radiografiasPacientes =
     // QUINTO OBJETO
     NOMBRES: "YESICA PAOLA",
     APELLIDOS: "JARAMILLO GUTIERREZ",
-    IMAGENES: "https://cdn-gojmf.nitrocdn.com/vhbBjgPyRXHyXBjwsZshxMMktRpfLbXF/assets/images/optimized/rev-e635d4c/wp-content/uploads/inline-images/tac_zona_incisivos_0.png",
+    IMAGENES: "https://radiologiadentallaspalmas.com/wp-content/uploads/2019/06/Escaner-dental.jpg",
     TipoDocumento: "CEDULA",
     ID: "1111145532",
     SEXO: "FEMENINO",

@@ -15,10 +15,6 @@ export default function PaginaPrincipal() {
     })
   }
 
-  const onSubmit = () => {
-    console.log(botonactivo)
-  }
-
   const datosEnviados = () => {
     alert("Hemos recibido tus datos, nos contactaremos contigo lo más pronto posible")
   }

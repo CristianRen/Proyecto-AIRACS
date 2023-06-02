@@ -268,8 +268,8 @@ export default function Interpretacion() {
                 Información del estudio:
               </p>
               <div className="grid lg:grid-cols-4 gap-4 grid md:grid-cols-1">
-                <div className="lg:text-left sm:text-center md:text-center">
-                  <div>
+                <div className="lg:text-left ">
+                  <div className="ml-0">
                     <label className="uppercase font-bold" for="fecha">
                       Fecha Toma:
                     </label>
@@ -467,10 +467,10 @@ export default function Interpretacion() {
  <section>
             <div className="border-2 border-violet-500 my-2 mx-20 p-2 md:flex-wrap sm:flex-wrap md:justify-center sm:justify-center h-min">
               <p className="mx-20 font-bold text-xl">Interpretación :</p>
-              <div className="lg:flex justify-start space-x-10 mx-20 md:flex-wrap">
-                <div>
+              <div className="lg:flex justify-start md:flex-wrap">
+                <div className="mx-6">
                   <label className="uppercase font-bold" for="diagnostico">
-                    DIAGNÓSTICO PRINCIPAL DEL PACIENTE:
+                    DIAGNOSTICO PRINCIPAL DEL PACIENTE:
                   </label>
                   <br />
 
@@ -483,9 +483,9 @@ export default function Interpretacion() {
                   <br />
                 </div>
 
-                <div>
+                <div className="mx-6">
                   <label className="uppercase font-bold" for="marca">
-                    NOMBRE DEL PROFESIONAL QUE SOLICITA LA REDIOGRAFÍA:
+                    NOMBRE DEL PROFESIONAL QUE SOLICITA LA RADIOGRAFIA:
                   </label>
                   <br />
                   <input
@@ -496,7 +496,7 @@ export default function Interpretacion() {
                   <br />
                 </div>
 
-                <div>
+                <div className="mx-6">
                   <label className="uppercase font-bold" for="marca">
                     SUCURSAL DE LA TOMA:{" "}
                   </label>
@@ -510,10 +510,10 @@ export default function Interpretacion() {
                 </div>
               </div>
               {/* ------------------------------------------------ */}
-              <div className="flex justify-start space-x-14 flex-wrap mx-20 sm:grid grid-cols-1 flex justify-center md:grid-cols-2 " >
-                <div>
+              <div className="flex justify-start flex-wrap mx-6 sm:grid grid-cols-1 flex justify-center md:grid-cols-2 " >
+                <div className="mr-6">
                   <label className="uppercase font-bold" for="diagnostico">
-                    PROFESIONAL QUE INTERPRETA LA RADIOGRAFÍA:
+                    PROFESIONAL QUE INTERPRETA LA RADIOGRAFIA:
                   </label>
                   <br />
 
@@ -526,9 +526,9 @@ export default function Interpretacion() {
                   <br />
                 </div>
 
-                <div>
+                <div className="w-fit">
                   <label className="uppercase font-bold" for="marca">
-                    FECHA DE INTERPRETACIÓN:{" "}
+                    FECHA DE INTERPRETACION:{" "}
                   </label>
                   <br />
                   <input
@@ -539,9 +539,9 @@ export default function Interpretacion() {
                 </div>
               </div>
 
-              <div className="mx-20 pt-5">
+              <div className="mx-6 pt-5">
                 <label className="uppercase font-bold" for="marca">
-                  INTERPRETACIÓN DE LA RADIOGRAFÍA POR PARTE DEL PROFESIONAL:{" "}
+                  INTERPRETACION DE LA RADIOGRAFIA POR PARTE DEL PROFESIONAL:{" "}
                 </label>
                 <br />
               <textarea
