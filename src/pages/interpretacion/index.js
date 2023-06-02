@@ -17,7 +17,7 @@ export default function Interpretacion() {
               <p className="mx-20 font-bold text-xl">
                 Información del paciente:
               </p>
-              <div className="flex justify-start py-2 flex  md:flex-wrap sm:flex-wrap">
+              <div className="flex justify-start py-2   md:flex-wrap grid-cols-2 sm:flex-wrap ">
                 <div className="ml-6">
                   <label className="uppercase font-bold" for="nombre">
                     Nombres:
@@ -88,7 +88,7 @@ export default function Interpretacion() {
 
               <div
                 name="Linea # 2"
-                className="flex justify-start flex md:flex-wrap sm:flex-wrap"
+                className="flex justify-start flex md:flex-wrap  sm:flex-wrap "
               >
                 <div className="ml-6">
                   <label className="uppercase font-bold" for="edad">
@@ -137,7 +137,7 @@ export default function Interpretacion() {
               <p className="mx-20 font-bold text-xl">
                 Información del servicio:
               </p>
-              <div className="flex justify-start space-x-6 flex md:flex-wrap sm:flex-wrap">
+              <div className="flex justify-start space-x-6 flex md:flex-wrap sm:flex-wrap ">
                 <div className="ml-6">
                   <label className="uppercase font-bold" for="servicio">
                     Servicio:
@@ -463,6 +463,99 @@ export default function Interpretacion() {
               </div>
             </div>
           </section>
+
+ <section>
+            <div className="border-2 border-violet-500 my-2 mx-20 p-2 md:flex-wrap sm:flex-wrap md:justify-center sm:justify-center h-min">
+              <p className="mx-20 font-bold text-xl">Interpretación :</p>
+              <div className="lg:flex justify-start space-x-10 mx-20 md:flex-wrap">
+                <div>
+                  <label className="uppercase font-bold" for="diagnostico">
+                    DIAGNÓSTICO PRINCIPAL DEL PACIENTE:
+                  </label>
+                  <br />
+
+                  <textarea
+                    type="text"
+                    className=" border to-black  bg-violet-100 p-1 w-full text-center"
+                    placeholder="Escriba el diagnóstico"
+                  ></textarea>
+
+                  <br />
+                </div>
+
+                <div>
+                  <label className="uppercase font-bold" for="marca">
+                    NOMBRE DEL PROFESIONAL QUE SOLICITA LA REDIOGRAFÍA:
+                  </label>
+                  <br />
+                  <input
+                    type="text"
+                    className=" border to-black  bg-violet-100 w-full text-center py-1"
+                    placeholder="Nombre del profesional"
+                  />
+                  <br />
+                </div>
+
+                <div>
+                  <label className="uppercase font-bold" for="marca">
+                    SUCURSAL DE LA TOMA:{" "}
+                  </label>
+                  <br />
+                  <input
+                    type="text"
+                    className=" border to-black  bg-violet-100 p-1 w-full "
+                    placeholder="Sucursal de la toma"
+                  />
+                  <br />
+                </div>
+              </div>
+              {/* ------------------------------------------------ */}
+              <div className="flex justify-start space-x-14 flex-wrap mx-20 sm:grid grid-cols-1 flex justify-center md:grid-cols-2 " >
+                <div>
+                  <label className="uppercase font-bold" for="diagnostico">
+                    PROFESIONAL QUE INTERPRETA LA RADIOGRAFÍA:
+                  </label>
+                  <br />
+
+                  <input
+                    type="text"
+                    className=" border to-black   bg-violet-100 p-1 w-full text-center"
+                    placeholder="Nombre de profesional"
+                  />
+
+                  <br />
+                </div>
+
+                <div>
+                  <label className="uppercase font-bold" for="marca">
+                    FECHA DE INTERPRETACIÓN:{" "}
+                  </label>
+                  <br />
+                  <input
+                    type="date"
+                    className=" border to-black   bg-violet-100 w-full text-center py-1"
+                  />
+                  <br />
+                </div>
+              </div>
+
+              <div className="mx-20 pt-5">
+                <label className="uppercase font-bold" for="marca">
+                  INTERPRETACIÓN DE LA RADIOGRAFÍA POR PARTE DEL PROFESIONAL:{" "}
+                </label>
+                <br />
+              <textarea
+                   type="text"
+                   className=" border to-black   bg-violet-100 p-2 w-full h-40 text-center"
+                   placeholder="Interpretación  del profesional"
+              >
+
+              </textarea>
+                <br />
+              </div>
+            </div>
+          </section>
+
           <div className="flex justify-center">
             <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2">
               Enviar información
