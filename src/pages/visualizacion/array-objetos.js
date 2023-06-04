@@ -1,6 +1,7 @@
 const radiografiasPacientes =
 [{
     // PRIMER OBJETO
+    INDEX: 0,
     NOMBRES: "GISELLE CAMILA",
     APELLIDOS: "GONZALEZ CIFUENTES",
     IMAGENES: "https://radiologiadentallaspalmas.com/wp-content/uploads/2019/07/post.-pan.jpeg",
@@ -35,6 +36,7 @@ const radiografiasPacientes =
 },
 {
     // SEGUNDO OBJETO
+    INDEX: 1,
     NOMBRES: "YESICA ANDREA",
     APELLIDOS: "SOLER LOPEZ",
     IMAGENES:"https://globalimagen.com.ec/wp-content/uploads/2023/02/45-Radiografia-dental-periapical.webp",
@@ -68,7 +70,8 @@ const radiografiasPacientes =
     cargoProfesional: "AUXILIAR EN SALUD ORAL",
 },
 {
-    // TERCER OBJETO 
+    // TERCER OBJETO
+    INDEX: 2, 
     NOMBRES: "WILSON ALBERTO",
     APELLIDOS: "ESCOBAR ESCOBAR",
     IMAGENES: "https://imagenrx.net/wp-content/uploads/2019/06/serv_tunm.jpg", 
@@ -103,6 +106,7 @@ const radiografiasPacientes =
 },
 {
     // CUARTO OBJETO
+    INDEX: 3,
     NOMBRES: "JUAN CAMILO",
     APELLIDOS: "GUILLEN BARBOSA",
     IMAGENES:"https://www.actaodontologica.com/ediciones/2012/4/art-22/3.jpg",
@@ -137,6 +141,7 @@ const radiografiasPacientes =
 },
 {
     // QUINTO OBJETO
+    INDEX: 4,
     NOMBRES: "YESICA PAOLA",
     APELLIDOS: "JARAMILLO GUTIERREZ",
     IMAGENES: "https://radiologiadentallaspalmas.com/wp-content/uploads/2019/06/Escaner-dental.jpg",
@@ -172,6 +177,7 @@ const radiografiasPacientes =
 {
 // SEXTO OBJETO
     // QUINTO OBJETO
+    INDEX: 5,
     NOMBRES: "ESTEBAN",
     APELLIDOS: "SALAMANCA PULIDO",
     IMAGENES: "https://dentometric.com/wp-content/uploads/2019/12/1.png",
@@ -204,7 +210,6 @@ const radiografiasPacientes =
     documentoProfesional: "123456786",
     cargoProfesional: "AUXILIAR EN SALUD ORAL",
 }
-
 ];
 
 export default radiografiasPacientes;
