@@ -43,15 +43,6 @@ export default function NavbarPrincipal(props) {
                       Visualización información paciente
                     </Link>
                   </li>
-
-                  <li>
-                    <a
-                      className="text-gray-500 transition hover:text-violet-600"
-                      href="/interpretacion"
-                    >
-                      Interpretacion
-                    </a>
-                  </li>
                 </>
               ) : (
                 <>
