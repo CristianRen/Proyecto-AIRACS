@@ -3,6 +3,7 @@ import quienesSomos from "../components/menu-principal/array-quienes";
 import nuestrosServicios from "../components/menu-principal/array-servicios";
 import "./estilo-principal.css";
 import { useState } from "react";
+// hey
 
 export default function PaginaPrincipal() {
   const [botonactivo, setbotonactivo] = useState({ NIT: "", razonSocial: "", CIUDAD: "", DIRECCION: "", TELEFONO: "", EMAIL: "" });
