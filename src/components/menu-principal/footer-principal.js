@@ -6,7 +6,7 @@ export default function FooterPrincipal() {
                 <div className="lg:flex lg:items-start lg:gap-8">
                     <div className="text-teal-600">
                         {/* va el logo */}
-                        <Imagen className="logo-compania" src="/imagenes/logo.avif" alt="logo" width={150} height={150}></Imagen>
+                        <Imagen className="logo-compania" src="/imagenes/logo.jpg" alt="logo" width={150} height={150}></Imagen>
                     </div>
 
                     <div className="mt-8 grid grid-cols-2 gap-8 lg:mt-0 lg:grid-cols-5 lg:gap-y-16">

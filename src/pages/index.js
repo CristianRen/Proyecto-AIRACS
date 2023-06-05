@@ -3,9 +3,10 @@ import quienesSomos from "../components/menu-principal/array-quienes";
 import nuestrosServicios from "../components/menu-principal/array-servicios";
 import "./estilo-principal.css";
 import { useState } from "react";
-// hey
 
 export default function PaginaPrincipal() {
+  const [mostrarAlerta, setMostrarAlerta] = useState(false);
+  const [mostrarBotonCierre, setMostrarBotonCierre] = useState(false);
   const [botonactivo, setbotonactivo] = useState({ NIT: "", razonSocial: "", CIUDAD: "", DIRECCION: "", TELEFONO: "", EMAIL: "" });
 
   const handleChange = (evento) => {
@@ -16,12 +17,8 @@ export default function PaginaPrincipal() {
     })
   }
 
-  const onSubmit =() =>{
+  const onSubmit = () => {
     console.log(botonactivo)
-  }
-
-  const datosEnviados = () => {
-    alert("Hemos recibido tus datos, nos contactaremos contigo lo más pronto posible")
   }
 
   return (
@@ -91,7 +88,32 @@ export default function PaginaPrincipal() {
 
               </div>
               <div className="flex justify-center">
-                <input className=" w-1/3 rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2 md:text-sm sm:text-xs" type="submit" value="Enviar" onClick={() => datosEnviados()}></input>
+                <div>
+                  {mostrarAlerta && (
+                    <div className="flex flex-column bg-violet-100 border border-violet-400 text-violet-700 px-4 mx-10 py-3 rounded relative" role="alert">
+                      <span className="block sm:inline"><strong className="font-bold">Información recibida!</strong> Nos contactaremos con usted los más pronto posible</span>
+                      {mostrarBotonCierre && (
+                        <button className="cerrar" onClick={() => setMostrarAlerta(false)}>
+                          <span className="absolute top-0 bottom-0 right-0 px-4 py-3">
+                            <svg className="fill-current h-6 w-6 text-violet-700" role="button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><title>Close</title><path d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" /></svg>
+                          </span>
+                        </button>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="flex justify-center">
+                    <button className="rounded-full bg-violet-500 text-white hover:bg-violet-200 hover:text-black p-4 my-2"
+                      onClick={() => {
+                        setMostrarAlerta(true);
+                        setMostrarBotonCierre(true);
+                      }}>
+                      Enviar
+                    </button>
+                  </div>
+                </div>
+
+
               </div>
             </div>
           </div>
